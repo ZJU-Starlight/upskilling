@@ -1,0 +1,36 @@
+/* Small, progressively enhanced interactions for the notebook homepage. */
+(() => {
+  function initializeDemos() {
+    document.querySelectorAll('[data-demo]').forEach((demo) => {
+      if (demo.dataset.initialized) return;
+      demo.dataset.initialized = 'true';
+      const tabs = [...demo.querySelectorAll('[role="tab"]')];
+      function activate(tab, focus = false) {
+        tabs.forEach((item) => {
+          const selected = item === tab;
+          item.setAttribute('aria-selected', String(selected));
+          item.tabIndex = selected ? 0 : -1;
+          document.getElementById(item.getAttribute('aria-controls')).hidden = !selected;
+        });
+        if (focus) tab.focus();
+      }
+      tabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => activate(tab));
+        tab.addEventListener('keydown', (event) => {
+          let next;
+          if (event.key === 'ArrowRight') next = tabs[(index + 1) % tabs.length];
+          if (event.key === 'ArrowLeft') next = tabs[(index + tabs.length - 1) % tabs.length];
+          if (event.key === 'Home') next = tabs[0];
+          if (event.key === 'End') next = tabs[tabs.length - 1];
+          if (next) { event.preventDefault(); activate(next, true); }
+        });
+      });
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeDemos);
+  } else {
+    initializeDemos();
+  }
+  if (typeof document$ !== 'undefined') document$.subscribe(initializeDemos);
+})();

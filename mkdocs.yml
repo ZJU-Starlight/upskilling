@@ -1,0 +1,87 @@
+site_name: Starlight · 内训手册
+site_description: 社团内训资料站，提供 Markdown 文档编写课件、语法参考和配套练习。
+site_url: https://zju-starlight.github.io/upskilling/
+repo_url: https://github.com/ZJU-Starlight/upskilling
+repo_name: ZJU-Starlight / upskilling
+copyright: Starlight · 社团内训资料
+docs_dir: docs
+site_dir: site
+theme:
+  name: material
+  variant: classic
+  custom_dir: overrides
+  language: zh
+  logo: assets/images/starlight.svg
+  favicon: assets/images/starlight.svg
+  font: false
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - search.highlight
+    - toc.follow
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: 切换到深色模式
+    - scheme: slate
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到浅色模式
+plugins:
+  - search
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - def_list
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.arithmatex:
+      generic: true
+extra_css:
+  - assets/stylesheets/notebook.css
+extra_javascript:
+  - assets/javascripts/notebook.js
+extra:
+  generator: false
+nav:
+  - 首页: index.md
+  - 内训课程:
+      - training/index.md
+      - 第三次 · Markdown 写作:
+          - training/session-03/index.md
+          - 01 · 环境配置: training/session-03/setup.md
+          - 02 · Markdown 基础: training/session-03/basics.md
+          - 03 · HTML 排版: training/session-03/html.md
+          - 04 · Mermaid 流程图: training/session-03/mermaid.md
+          - 05 · LaTeX 数学公式: training/session-03/math.md
+          - 06 · 综合练习: training/session-03/exercises.md
+          - 参考答案: training/session-03/solutions.md
+  - 语法速查: cheatsheet.md
+  - 贡献指南: contributing.md

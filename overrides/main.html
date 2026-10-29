@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+  {# Preload the local global before the theme initializes its diagram renderer. #}
+  {% if page and 'class="mermaid"' in page.content %}
+    <script src="{{ 'assets/vendor/mermaid/mermaid.min.js' | url }}"></script>
+  {% endif %}
+  {{ super() }}
+  {# SVG math only loads on pages containing actual formula output. #}
+  {% if page and 'arithmatex' in page.content %}
+    <script src="{{ 'assets/javascripts/math-config.js' | url }}"></script>
+    <script src="{{ 'assets/vendor/mathjax/tex-svg.js' | url }}"></script>
+  {% endif %}
+{% endblock %}

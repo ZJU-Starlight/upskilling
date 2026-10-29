@@ -1,0 +1,15 @@
+Generated website illustrations
+Date: 2026-10-29
+Mode: built-in image_gen.imagegen tool. No CLI fallback was used.
+The built-in tool chooses its image generation backend; no explicit model selector was exposed.
+Original generated PNGs were copied into this repository; the originals were preserved.
+
+Asset: notebook-garden.png
+Purpose: homepage hero illustration
+Prompt:
+Use case: stylized-concept. Asset type: polished website hero illustration for a Chinese student club's Markdown learning notebook. Create a wide 3:2 landscape composition on a seamless warm ivory cream background (#f7f5ee). Subject: a beautifully crafted miniature isometric learning scene, an open paper notebook beside a small open laptop, hovering paper cards showing clean abstract Markdown-like text lines, a few connected flowchart nodes, and a small mathematical sigma symbol. Add a few tiny four-point star accents. Style: premium editorial 3D paper craft, matte clay and softly textured thick paper, elegant and playful without being childish; rounded refined forms, subtle realistic contact shadows and warm diffuse studio lighting. Palette: muted indigo, deep teal, apricot orange and warm ivory, with plenty of breathing room and no hard border. Composition: grouped cohesive scene with the main objects fully inside the image, suited to the right half of a homepage hero; background stays warm ivory edge to edge. No words, no letters beyond a simple sigma mathematical symbol, no logos, no watermark, no people, no interface screenshot. Beautiful high quality final website asset.
+
+Asset: study-desk.png
+Purpose: exercise page cover and homework image-syntax practice
+Prompt:
+Use case: stylized-concept. Asset type: elegant learning exercise banner for a student club Markdown notebook website. Create a wide 16:9 landscape premium editorial still life, viewed from overhead at a gentle angle, on a seamless warm ivory cream desk (#f7f5ee). Subject: a beautiful open cream notebook with abstract short indigo ruled lines and a few small teal square checkboxes, a blank paper exercise sheet with tidy understated colored rectangles, one indigo pencil and one apricot orange pencil, a teal binder clip, and two tiny four-point star accents. Style: refined tactile paper craft and matte clay 3D, softly textured thick paper, warm diffuse studio lighting, delicate realistic shadows, serene and organized, modern editorial quality. Palette: ivory, muted indigo, deep teal, apricot orange, same coherent restrained palette across the scene. Composition: airy balanced desk layout, notebook and exercise sheet clearly visible, all objects inside frame, plenty of uncluttered negative space, no border. No readable words or letters, no logos, no watermark, no people, no interface screenshot. Final polished website illustration.
